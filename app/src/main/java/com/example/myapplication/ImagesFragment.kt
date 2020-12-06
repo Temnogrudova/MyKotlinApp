@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -28,6 +29,10 @@ class ImagesFragment: BaseFragment (R.layout.fragment_images) {
         override fun onItemClick(v: View, url: String) {
             viewModel.onItemClick(v, url)
         }
+
+        override fun onLongClick(item: PixabayModel.Image) {
+            viewModel.onLongClick(item)
+        }
     }
 
     private fun initObserves() {
@@ -35,6 +40,11 @@ class ImagesFragment: BaseFragment (R.layout.fragment_images) {
             this.images.clear()
             this.images.addAll(it)
             rvImages.adapter?.notifyDataSetChanged()
+        })
+        viewModel.getFavouritesArticles().observe(viewLifecycleOwner, Observer {
+            it.forEach {
+                Log.e("Katya", it.previewURL)
+            }
         })
     }
 }

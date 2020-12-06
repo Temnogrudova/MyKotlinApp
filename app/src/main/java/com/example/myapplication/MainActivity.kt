@@ -13,6 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 //добавить хильт и навграф. +
 //Добавить поиск
 //добавить тесты
+//сделать номера версий библиотек параметрами
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 

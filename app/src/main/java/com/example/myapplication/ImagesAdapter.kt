@@ -14,6 +14,7 @@ class ImagesAdapter(
 ) : RecyclerView.Adapter<ImagesAdapter.BaseViewHolder>() {
     interface InteractionListener {
         fun onItemClick(v: View, url: String)
+        fun onLongClick(item: PixabayModel.Image)
     }
 
     private lateinit var inflater: LayoutInflater
@@ -31,6 +32,13 @@ class ImagesAdapter(
                 itemView.setOnClickListener { v ->
                     interactionListener.onItemClick(itemView, it)
                 }
+                itemView.setOnLongClickListener { v->
+                    interactionListener.onLongClick(item)
+                    return@setOnLongClickListener true
+                }
+             /*   itemView.setOnLongClickListener { v ->
+                    interactionListener.onLongClick(item)
+                }*/
             }
         }
     }
