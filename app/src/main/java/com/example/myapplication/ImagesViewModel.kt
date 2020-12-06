@@ -26,7 +26,6 @@ class ImagesViewModel  @ViewModelInject constructor(
     }
 
     fun onItemClick(v: View, url: String) {
-        Toast.makeText(v.context, url, Toast.LENGTH_SHORT).show()
-        //v.findNavController().navigate(MyNewsMainFragmentDirections.actionGlobalToArticle(url))
+        v.findNavController().navigate(ImagesFragmentDirections.actionImagesFragmentToImageFragment(url))
     }
 }

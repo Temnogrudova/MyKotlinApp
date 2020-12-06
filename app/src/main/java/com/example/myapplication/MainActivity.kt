@@ -8,10 +8,11 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 
 //Сделать список по урл с корутинами правильной архитеркутры и
-// созхранение любимых с ивпольщованием рум.
-//Открыть вать по клику элемент.
-//добавить хильт и навграф.
+// сохранение любимых с ивпольщованием рум.
+//Открывать по клику элемент.
+//добавить хильт и навграф. +
 //Добавить поиск
+//добавить тесты
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 

@@ -9,7 +9,18 @@
         android:name="com.example.myapplication.ImagesFragment"
         android:label=""
         tools:layout="@layout/fragment_images">
-
+        <action
+            android:id="@+id/action_imagesFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
     </fragment>
-
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.myapplication.ui.ImageFragment"
+        android:label=""
+        tools:layout="@layout/fragment_image">
+        <argument
+            android:name="url"
+            app:argType="string"
+            app:nullable="false"/>
+    </fragment>
 </navigation>
