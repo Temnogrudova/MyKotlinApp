@@ -1,9 +1,10 @@
-package com.goldtouch.ynet.repos.saved_articles
+package  com.example.myapplication.repos.saved_items
+
 
 import androidx.room.*
 
 @Dao
-abstract class SavedArticleDao {
+abstract class SavedItemDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract fun insert(item: Item)
@@ -20,7 +21,7 @@ abstract class SavedArticleDao {
     abstract fun deleteAllFavourite()
 
     @Query("SELECT * FROM item WHERE type LIKE 'TYPE_FAVOURITE'")
-    abstract fun getFavouriteArticles(): List<Item>
+    abstract fun getFavouriteItems(): List<Item>
 
 
 }

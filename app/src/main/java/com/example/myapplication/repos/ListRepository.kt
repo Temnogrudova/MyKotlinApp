@@ -6,7 +6,7 @@ import com.example.myapplication.models.PixabayModel
 /**
  * A repository pattern for retrieving MyNews related data
  */
-interface ImagesRepository {
+interface ListRepository {
 
 
     /**
@@ -18,6 +18,6 @@ interface ImagesRepository {
     /**
      * Fetch and updates the data of [myNewsTotalTagsLiveData]. the query state is published threw [myNewsTotalTagsQueryStateLiveData]
      */
-    suspend fun fetchImages(page:String)
+    suspend fun fetchItems(page:String)
 
 }

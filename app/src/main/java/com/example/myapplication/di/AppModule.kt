@@ -1,7 +1,7 @@
 package com.example.myapplication.di
 
 import android.content.Context
-import android.net.ConnectivityManager
+
 import androidx.room.Room
 import com.example.myapplication.repos.LocalDb
 import com.example.myapplication.repos.MIGRATION_FORM_1_TO_2

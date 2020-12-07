@@ -6,18 +6,18 @@
     app:startDestination="@id/listDest">
     <fragment
         android:id="@+id/listDest"
-        android:name="com.example.myapplication.ImagesFragment"
+        android:name="com.example.myapplication.ui.ListFragment"
         android:label=""
-        tools:layout="@layout/fragment_images">
+        tools:layout="@layout/fragment_list">
         <action
-            android:id="@+id/action_imagesFragment_to_imageFragment"
-            app:destination="@id/imageFragment" />
+            android:id="@+id/action_listFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
     </fragment>
     <fragment
-        android:id="@+id/imageFragment"
-        android:name="com.example.myapplication.ui.ImageFragment"
+        android:id="@+id/itemFragment"
+        android:name="com.example.myapplication.ui.ItemFragment"
         android:label=""
-        tools:layout="@layout/fragment_image">
+        tools:layout="@layout/fragment_item">
         <argument
             android:name="url"
             app:argType="string"

@@ -1,15 +1,16 @@
-package com.example.myapplication
+package com.example.myapplication.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.example.myapplication.R
 import dagger.hilt.android.AndroidEntryPoint
 
 //Сделать список по урл с корутинами правильной архитеркутры и
 // сохранение любимых с ивпольщованием рум.
-//Открывать по клику элемент.
+//Открывать по клику элемент. +
 //добавить хильт и навграф. +
 //Добавить поиск
 //добавить тесты

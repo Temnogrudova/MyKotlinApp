@@ -1,17 +1,18 @@
-package com.example.myapplication
+package com.example.myapplication.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 import com.example.myapplication.models.PixabayModel
 import com.example.myapplication.utils.loadImage
 import kotlinx.android.synthetic.main.item.view.*
 
-class ImagesAdapter(
-    private var images: List<PixabayModel.Image?>,
+class ListAdapter(
+    internal var items: List<PixabayModel.Image?>,
     private val interactionListener: InteractionListener
-) : RecyclerView.Adapter<ImagesAdapter.BaseViewHolder>() {
+) : RecyclerView.Adapter<ListAdapter.BaseViewHolder>() {
     interface InteractionListener {
         fun onItemClick(v: View, url: String)
         fun onLongClick(item: PixabayModel.Image)
@@ -51,9 +52,9 @@ class ImagesAdapter(
         return ImagesViewHolder(view)
     }
 
-    override fun getItemCount(): Int = images.size
+    override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
-        (holder as ImagesViewHolder).bind(images[position])
+        (holder as ImagesViewHolder).bind(items[position])
     }
 }

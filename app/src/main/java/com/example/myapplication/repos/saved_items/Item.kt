@@ -1,4 +1,4 @@
-package com.goldtouch.ynet.repos.saved_articles
+package  com.example.myapplication.repos.saved_items
 
 import androidx.room.*
 import com.example.myapplication.models.PixabayModel

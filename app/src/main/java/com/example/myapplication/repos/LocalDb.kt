@@ -4,8 +4,8 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.goldtouch.ynet.repos.saved_articles.Item
-import com.goldtouch.ynet.repos.saved_articles.SavedArticleDao
+import com.example.myapplication.repos.saved_items.Item
+import com.example.myapplication.repos.saved_items.SavedItemDao
 
 @Database(
     entities = [
@@ -16,7 +16,7 @@ import com.goldtouch.ynet.repos.saved_articles.SavedArticleDao
 )
 
 abstract class LocalDb : RoomDatabase() {
-    abstract fun savedArticle(): SavedArticleDao
+    abstract fun savedItem(): SavedItemDao
 }
 
 
